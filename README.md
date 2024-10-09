@@ -23,7 +23,38 @@ This is a RESTful API built using the [Slim Framework](https://www.slimframework
 
 ## Installation
 
-Just run this command in linux: composer install
+Run the SQL script in MySql and run this command in linux: 
+
+\```
+composer install
+\```
+
+### Steps to Remove `index.php` from URLs
+
+1. **Create a `.htaccess` file** inside the API directory of your project. If the file already exists, modify it as follows:
+
+2. Add the following rules to the .htaccess file to enable URL rewriting:
+
+\```
+# Use mod_rewrite to remove index.php from URLs
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Conditionally redirect if index.php is in the URL
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Rewrite to remove index.php
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+\```
+
+3. Ensure mod_rewrite is enabled on your Apache server. You can enable it by running the following command:
+
+\```
+sudo a2enmod rewrite
+\```
 
 ## Images
 
