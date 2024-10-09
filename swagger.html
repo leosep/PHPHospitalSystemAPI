@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.3/swagger-ui.css" />
+</head>
+<body>
+    <div id="swagger-ui"></div>
+    
+    <!-- Load Swagger UI bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.3/swagger-ui-bundle.js"></script>
+    <!-- Load Swagger UI standalone preset -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.3/swagger-ui-standalone-preset.js"></script>
+
+    <script>
+        const ui = SwaggerUIBundle({
+            url: "swagger.php", // Update with your swagger.php path
+            dom_id: '#swagger-ui',
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset // This should be defined now
+            ],
+            layout: "StandaloneLayout"
+        });
+        
+        window.ui = ui; // Make the UI accessible globally
+    </script>
+</body>
+</html>

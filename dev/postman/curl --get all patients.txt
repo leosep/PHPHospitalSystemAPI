@@ -1,0 +1,2 @@
+curl --location 'http://192.168.68.222/patients?page=1&pageSize=5' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg0Mzc1NTMsImV4cCI6MTcyODQ0MTE1MywidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJsZW8ifQ.txmXdWIa5o8njJHY9GfT7RU94aFHcv62sCaXwonvm4A'

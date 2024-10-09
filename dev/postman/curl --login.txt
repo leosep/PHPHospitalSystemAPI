@@ -1,0 +1,6 @@
+curl --location 'http://192.168.68.222/login' \
+--header 'Content-Type: application/json' \
+--data '{
+    "username": "leo",
+    "password": "123456"
+}'

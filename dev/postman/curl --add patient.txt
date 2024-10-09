@@ -1,0 +1,8 @@
+curl --location 'http://192.168.68.222/patients' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg0MzcwNzMsImV4cCI6MTcyODQ0MDY3MywidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJsZW8ifQ.iHxkaHXBV_msbIPDSq7pDGlISiKwjLR5zyaDWSDMGbs' \
+--data '{
+    "name": "John Doe 2",
+    "address": "123 Main St",
+    "phoneNumber": "809-345-7654"
+}'
