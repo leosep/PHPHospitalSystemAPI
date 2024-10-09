@@ -36,17 +36,13 @@ composer install
 2. Add the following rules to the .htaccess file to enable URL rewriting:
 
 ```
-# Use mod_rewrite to remove index.php from URLs
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
-    # Conditionally redirect if index.php is in the URL
+
+    # Remove index.php from the URL
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    
-    # Rewrite to remove index.php
-    RewriteRule ^ index.php [QSA,L]
+    RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
 ```
 
@@ -54,6 +50,13 @@ composer install
 
 ```
 sudo a2enmod rewrite
+```
+
+### Run unit tests
+
+Run command:
+```
+vendor/bin/phpunit tests/
 ```
 
 ## Images
