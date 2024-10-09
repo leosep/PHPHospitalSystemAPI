@@ -25,3 +25,8 @@ This is a RESTful API built using the [Slim Framework](https://www.slimframework
 
 Just run this command in linux: composer install
 
+## Images
+
+![image info](./dev/images/swagger.png)
+![image info](./dev/images/postman.png)
+
