@@ -25,9 +25,9 @@ This is a RESTful API built using the [Slim Framework](https://www.slimframework
 
 Run the SQL script in MySql and run this command in linux: 
 
-\```
+```
 composer install
-\```
+```
 
 ### Steps to Remove `index.php` from URLs
 
@@ -35,7 +35,7 @@ composer install
 
 2. Add the following rules to the .htaccess file to enable URL rewriting:
 
-\```
+```
 # Use mod_rewrite to remove index.php from URLs
 
 <IfModule mod_rewrite.c>
@@ -48,13 +48,13 @@ composer install
     # Rewrite to remove index.php
     RewriteRule ^ index.php [QSA,L]
 </IfModule>
-\```
+```
 
 3. Ensure mod_rewrite is enabled on your Apache server. You can enable it by running the following command:
 
-\```
+```
 sudo a2enmod rewrite
-\```
+```
 
 ## Images
 
