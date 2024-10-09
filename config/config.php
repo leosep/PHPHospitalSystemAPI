@@ -3,7 +3,7 @@
 $host = 'localhost';
 $db = 'hospital_db';
 $user = 'leo';
-$pass = 'Symetri123@';
+$pass = '123456';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
